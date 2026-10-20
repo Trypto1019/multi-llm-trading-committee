@@ -1,0 +1,26 @@
+{
+  "_comment": "SYNTHETIC headlines for fictional tickers. Not real news.",
+  "headlines": {
+    "ACME": [
+      {"source": "Example Wire", "headline": "ACME wins multi-year rail-components contract", "published": "2026-03-06T12:10:00+00:00"},
+      {"source": "Example Wire", "headline": "Industrial orders index rises for a third month", "published": "2026-03-06T09:00:00+00:00"}
+    ],
+    "BOLT": [
+      {"source": "Example Markets Desk", "headline": "BOLT unveils new data-center switch line", "published": "2026-03-06T11:30:00+00:00"}
+    ],
+    "CRUX": [
+      {"source": "Example Wire", "headline": "Crude inventories build more than expected", "published": "2026-03-06T14:30:00+00:00"},
+      {"source": "Example Wire", "headline": "CRUX reaffirms full-year production guidance", "published": "2026-03-05T21:00:00+00:00"}
+    ],
+    "DYNA": [
+      {"source": "Example Markets Desk", "headline": "DYNA cuts revenue outlook on weaker enterprise demand", "published": "2026-03-06T13:00:00+00:00"}
+    ],
+    "EMBR": [
+      {"source": "Example Wire", "headline": "EMBR trial readout scheduled for next month", "published": "2026-03-06T10:45:00+00:00"}
+    ],
+    "GLOW": [
+      {"source": "Example Wire", "headline": "GLOW to report quarterly results next week", "published": "2026-03-06T08:15:00+00:00"},
+      {"source": "Example Social Pulse", "headline": "Retail chatter on GLOW rises ahead of results", "published": "2026-03-06T14:00:00+00:00"}
+    ]
+  }
+}

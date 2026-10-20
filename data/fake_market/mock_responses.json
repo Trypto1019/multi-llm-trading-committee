@@ -1,0 +1,330 @@
+{
+  "_comment": "Canned model outputs for the offline demo and tests. Keys are agent|model|key; * is a wildcard. SYNTHETIC.",
+  "macro_regime|*|MARKET": {
+    "regime": "NEUTRAL",
+    "confidence": 0.6,
+    "vix": {
+      "level": 26.4,
+      "term_structure": "FLAT",
+      "interpretation": "Elevated but not panicked"
+    },
+    "favored_strategies": [
+      "PULLBACK_LONG"
+    ],
+    "avoid_strategies": [
+      "BREAKOUT_CHASE"
+    ],
+    "regime_permissions": {
+      "allow_momentum_long": true,
+      "allow_breakout_long": false,
+      "allow_mean_reversion_short": true,
+      "allow_countertrend": false,
+      "max_risk_multiplier": 0.5
+    },
+    "macro_risks": [
+      "Central-bank speaker after the close"
+    ],
+    "summary": "Neutral regime with elevated volatility; size down."
+  },
+  "news_analyst|*|ACME": {
+    "ticker": "ACME",
+    "sentiment": "TAILWIND",
+    "catalyst_flag": false,
+    "headlines": [
+      {
+        "source": "Example Wire",
+        "headline": "ACME wins multi-year rail-components contract",
+        "impact": "TAILWIND",
+        "relevance": 0.85
+      }
+    ],
+    "summary": "New multi-year contract; no event risk inside the window.",
+    "notes_for_traders": ""
+  },
+  "news_analyst|*|BOLT": {
+    "ticker": "BOLT",
+    "sentiment": "NEUTRAL",
+    "catalyst_flag": false,
+    "headlines": [
+      {
+        "source": "Example Markets Desk",
+        "headline": "BOLT unveils new data-center switch line",
+        "impact": "NEUTRAL",
+        "relevance": 0.4
+      }
+    ],
+    "summary": "Product news, unclear revenue impact.",
+    "notes_for_traders": ""
+  },
+  "news_analyst|*|CRUX": {
+    "ticker": "CRUX",
+    "sentiment": "MIXED",
+    "catalyst_flag": false,
+    "headlines": [
+      {
+        "source": "Example Wire",
+        "headline": "Crude inventories build more than expected",
+        "impact": "HEADWIND",
+        "relevance": 0.6
+      },
+      {
+        "source": "Example Wire",
+        "headline": "CRUX reaffirms full-year production guidance",
+        "impact": "TAILWIND",
+        "relevance": 0.5
+      }
+    ],
+    "summary": "Company tailwind against a sector headwind.",
+    "notes_for_traders": ""
+  },
+  "news_analyst|*|DYNA": {
+    "ticker": "DYNA",
+    "sentiment": "HEADWIND",
+    "catalyst_flag": false,
+    "headlines": [
+      {
+        "source": "Example Markets Desk",
+        "headline": "DYNA cuts revenue outlook on weaker enterprise demand",
+        "impact": "HEADWIND",
+        "relevance": 0.9
+      }
+    ],
+    "summary": "Guidance cut; material negative.",
+    "notes_for_traders": ""
+  },
+  "news_analyst|*|EMBR": {
+    "ticker": "EMBR",
+    "sentiment": "NEUTRAL",
+    "catalyst_flag": false,
+    "headlines": [
+      {
+        "source": "Example Wire",
+        "headline": "EMBR trial readout scheduled for next month",
+        "impact": "NEUTRAL",
+        "relevance": 0.5
+      }
+    ],
+    "summary": "Readout is outside the holding window.",
+    "notes_for_traders": ""
+  },
+  "news_analyst|*|GLOW": {
+    "ticker": "GLOW",
+    "sentiment": "MIXED",
+    "catalyst_flag": true,
+    "headlines": [
+      {
+        "source": "Example Wire",
+        "headline": "GLOW to report quarterly results next week",
+        "impact": "CATALYST",
+        "relevance": 0.9
+      }
+    ],
+    "summary": "Results in 6 days; retail chatter rising.",
+    "notes_for_traders": ""
+  },
+  "council_member|openai/gpt-4o|ACME": [
+    {
+      "direction": "BULLISH",
+      "action": "BUY",
+      "reasoning": "Contract win plus higher lows."
+    },
+    {
+      "direction": "BULLISH",
+      "action": "BUY",
+      "confidence": 0.72,
+      "reasoning": "Contract win, higher lows, volume 1.6x average.",
+      "stop_loss": 47.6,
+      "take_profit": 54.5
+    }
+  ],
+  "council_member|google/gemini-2.0-flash-001|ACME": {
+    "direction": "BULLISH",
+    "action": "BUY",
+    "confidence": 0.7,
+    "reasoning": "Trend intact above the 5-day average.",
+    "stop_loss": 47.7,
+    "take_profit": 54.0
+  },
+  "council_member|x-ai/grok-3|ACME": {
+    "direction": "BULLISH",
+    "action": "BUY",
+    "confidence": 0.74,
+    "reasoning": "Positive news flow, no event risk.",
+    "stop_loss": 47.5,
+    "take_profit": 55.0
+  },
+  "council_member|openai/gpt-4o|BOLT": {
+    "direction": "BULLISH",
+    "action": "BUY",
+    "confidence": 0.62,
+    "reasoning": "Breakout attempt over recent range.",
+    "stop_loss": 80.4,
+    "take_profit": 95.0
+  },
+  "council_member|google/gemini-2.0-flash-001|BOLT": "Here is my assessment.\n```json\n{\"direction\": \"BULLISH\", \"action\": \"BUY\", \"confidence\": 0.58, \"reasoning\": \"Momentum positive, volume average.\", \"stop_loss\": 80.2, \"take_profit\": 94.0}\n```\nLet me know if you need more.",
+  "council_member|x-ai/grok-3|BOLT": {
+    "direction": "NEUTRAL",
+    "action": "HOLD",
+    "confidence": 0.45,
+    "reasoning": "Product news is not a catalyst; wait.",
+    "stop_loss": null,
+    "take_profit": null
+  },
+  "council_member|openai/gpt-4o|CRUX": {
+    "direction": "BULLISH",
+    "action": "BUY",
+    "confidence": 0.55,
+    "reasoning": "Guidance reaffirmed.",
+    "stop_loss": 30.8,
+    "take_profit": 34.0
+  },
+  "council_member|google/gemini-2.0-flash-001|CRUX": {
+    "direction": "BEARISH",
+    "action": "SHORT",
+    "confidence": 0.57,
+    "reasoning": "Inventory build pressures the sector.",
+    "stop_loss": 33.0,
+    "take_profit": 29.5
+  },
+  "council_member|x-ai/grok-3|CRUX": {
+    "__error__": "simulated upstream timeout"
+  },
+  "council_member|openai/gpt-4o|DYNA": {
+    "direction": "BEARISH",
+    "action": "SHORT",
+    "confidence": 0.71,
+    "reasoning": "Guidance cut, lower highs.",
+    "stop_loss": 21.4,
+    "take_profit": 18.5
+  },
+  "council_member|google/gemini-2.0-flash-001|DYNA": {
+    "direction": "BEARISH",
+    "action": "SHORT",
+    "confidence": 0.68,
+    "reasoning": "Guidance cut, lower highs.",
+    "stop_loss": 21.4,
+    "take_profit": 18.5
+  },
+  "council_member|x-ai/grok-3|DYNA": {
+    "direction": "BEARISH",
+    "action": "SHORT",
+    "confidence": 0.75,
+    "reasoning": "Guidance cut, lower highs.",
+    "stop_loss": 21.4,
+    "take_profit": 18.5
+  },
+  "council_member|openai/gpt-4o|EMBR": {
+    "direction": "BULLISH",
+    "action": "BUY",
+    "confidence": 0.61,
+    "reasoning": "Steady uptrend into readout.",
+    "stop_loss": 63.2,
+    "take_profit": 67.0
+  },
+  "council_member|google/gemini-2.0-flash-001|EMBR": {
+    "direction": "BULLISH",
+    "action": "BUY",
+    "confidence": 0.6,
+    "reasoning": "Steady uptrend into readout.",
+    "stop_loss": 63.2,
+    "take_profit": 67.0
+  },
+  "council_member|x-ai/grok-3|EMBR": {
+    "direction": "BULLISH",
+    "action": "BUY",
+    "confidence": 0.63,
+    "reasoning": "Steady uptrend into readout.",
+    "stop_loss": 63.2,
+    "take_profit": 67.0
+  },
+  "council_member|openai/gpt-4o|GLOW": {
+    "direction": "BULLISH",
+    "action": "BUY",
+    "confidence": 0.6,
+    "reasoning": "Run-up into results.",
+    "stop_loss": 17.6,
+    "take_profit": 20.0
+  },
+  "council_member|google/gemini-2.0-flash-001|GLOW": {
+    "direction": "BULLISH",
+    "action": "BUY",
+    "confidence": 0.57,
+    "reasoning": "Retail interest rising.",
+    "stop_loss": 17.7,
+    "take_profit": 19.8
+  },
+  "council_member|x-ai/grok-3|GLOW": {
+    "direction": "NEUTRAL",
+    "action": "HOLD",
+    "confidence": 0.4,
+    "reasoning": "Binary event next week; wait.",
+    "stop_loss": null,
+    "take_profit": null
+  },
+  "arbiter|*|ACME": {
+    "decision": "APPROVE",
+    "veto_reason_code": null,
+    "veto_detail": null,
+    "direction": "BULLISH",
+    "final_action": "BUY",
+    "blockers": [],
+    "top_risks": [],
+    "what_changes_my_mind": [],
+    "summary": "R-multiple 1.9, no blockers, majority unanimous."
+  },
+  "arbiter|*|BOLT": {
+    "decision": "VETO",
+    "veto_reason_code": "TECHNICALS_DISAGREE",
+    "veto_detail": "One member is neutral and the breakout looks weak.",
+    "direction": "BULLISH",
+    "final_action": "HOLD",
+    "blockers": [],
+    "top_risks": [],
+    "what_changes_my_mind": [],
+    "summary": "I do not like the chart."
+  },
+  "arbiter|*|EMBR": {
+    "decision": "VETO",
+    "veto_reason_code": "R_MULTIPLE_BELOW_1",
+    "veto_detail": "Reward to target 1.6 vs risk 2.2 (R=0.8).",
+    "direction": "BEARISH",
+    "final_action": "SHORT",
+    "blockers": [],
+    "top_risks": [],
+    "what_changes_my_mind": [],
+    "summary": "R below 1.0; also think it rolls over."
+  },
+  "arbiter|*|GLOW": {
+    "decision": "APPROVE",
+    "veto_reason_code": null,
+    "veto_detail": null,
+    "direction": "BULLISH",
+    "final_action": "BUY",
+    "blockers": [],
+    "top_risks": [],
+    "what_changes_my_mind": [],
+    "summary": "Fine."
+  },
+  "debate_research|*|IDEA-ACME-WK10": "ACME: new contract; trend higher; no scheduled events. (synthetic briefing)",
+  "debate_advocate|*|IDEA-ACME-WK10:backed": "Case for: the evidence modestly supports this outcome. (synthetic)",
+  "debate_advocate|*|IDEA-ACME-WK10:other": "Case against: the move is already priced and event risk cuts both ways. (synthetic)",
+  "debate_blind_judge|*|IDEA-ACME-WK10": {
+    "p_backed": 0.58,
+    "key_factor": "Balance of evidence in the briefing (synthetic)."
+  },
+  "debate_priced_judge|*|IDEA-ACME-WK10": {
+    "score": 7,
+    "rationale": "Blind estimate vs implied probability (synthetic)."
+  },
+  "debate_research|*|IDEA-GLOW-WK10": "GLOW: results next week; options imply a large move. (synthetic briefing)",
+  "debate_advocate|*|IDEA-GLOW-WK10:backed": "Case for: the evidence modestly supports this outcome. (synthetic)",
+  "debate_advocate|*|IDEA-GLOW-WK10:other": "Case against: the move is already priced and event risk cuts both ways. (synthetic)",
+  "debate_blind_judge|*|IDEA-GLOW-WK10": {
+    "p_backed": 0.44,
+    "key_factor": "Balance of evidence in the briefing (synthetic)."
+  },
+  "debate_priced_judge|*|IDEA-GLOW-WK10": {
+    "score": 3,
+    "rationale": "Blind estimate vs implied probability (synthetic)."
+  }
+}

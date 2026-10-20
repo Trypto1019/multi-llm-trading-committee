@@ -1,0 +1,14 @@
+{
+  "_comment": "SYNTHETIC binary ideas for the debate-ranker demo. Fictional tickers and prices.",
+  "candidates": [
+    {"case_id": "IDEA-ACME-WK10", "question": "Does ACME close the week above 50.00?",
+     "outcome_backed": "ACME closes the week above 50.00", "outcome_other": "ACME closes the week at or below 50.00",
+     "price": 0.52, "window_opens_at": "2026-03-09T14:30:00+00:00"},
+    {"case_id": "IDEA-GLOW-WK10", "question": "Does GLOW close the week above 19.00?",
+     "outcome_backed": "GLOW closes the week above 19.00", "outcome_other": "GLOW closes the week at or below 19.00",
+     "price": 0.47, "window_opens_at": "2026-03-09T14:30:00+00:00"},
+    {"case_id": "IDEA-CRUX-STALE", "question": "Does CRUX close the day above 32.00?",
+     "outcome_backed": "CRUX closes the day above 32.00", "outcome_other": "CRUX closes the day at or below 32.00",
+     "price": 0.40, "window_opens_at": "2026-03-06T14:30:00+00:00"}
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "patterns": {
+    "CATALYST_WITHOUT_UNANIMITY": {
+      "trigger": "news.catalyst_flag == true AND agents_bullish < 3 AND agents_bearish < 3",
+      "action": "SKIP",
+      "tier": "B",
+      "note": "Do not take a split-council trade into a scheduled binary event."
+    },
+    "RISK_OFF_LONG_FILTER": {
+      "trigger": "macro.regime == 'RISK_OFF' AND council.direction == 'BULLISH'",
+      "action": "SKIP",
+      "tier": "B",
+      "note": "No new longs against a risk-off regime call."
+    },
+    "UNANIMOUS_WITH_VOLUME": {
+      "trigger": "(agents_bullish == 3 OR agents_bearish == 3) AND market.rel_volume >= 1.5",
+      "action": "TRADE",
+      "tier": "C",
+      "note": "Informational tag only; tiers are earned from live stats, never assigned."
+    }
+  }
+}

@@ -1,0 +1,32 @@
+# secrets
+.env*
+!.env.example
+*.pem
+*.key
+
+# data / databases
+*.sqlite
+*.db
+*.dump
+*.sql.gz
+logs/
+out/
+
+# python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+
+# js (not used, kept for consistency)
+node_modules/
+.next/
+
+# agent tooling
+.claude/
+CLAUDE.md
+AGENTS.md
